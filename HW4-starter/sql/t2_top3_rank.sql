@@ -2,7 +2,7 @@
 -- only, keeping rows with pos <= 3.
 -- Required columns: occupation, pos, movie_id, title, n, mean_rating
 --
--- Prediction (commit before running): ______ rows, which is (more / the same / fewer)
--- than version 1, because ______.
+-- Prediction (commit before running): ___~70___ rows, which is more
+-- than version 1, because ___because every occupation ROW_NUMBER keeps RANK keeps it too and it's rank might be smaller or the same. RANK may keep tied movies, so it returns the same or more number of rows as ROW_NUMBER.
 
 -- YOUR QUERY HERE

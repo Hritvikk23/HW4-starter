@@ -5,7 +5,7 @@
 -- run.py fills in the month boundaries and checks the counts match.
 -- Required: one column, the count.
 --
--- Prediction (commit before running): plan of D_month after your indexes ______;
--- plan of this rewrite ______.
+-- Prediction (commit before running): plan of D_month after your indexes __SCAN;
+-- plan of this rewrite SEARCH USING index(timestamp).
 
 -- YOUR QUERY HERE

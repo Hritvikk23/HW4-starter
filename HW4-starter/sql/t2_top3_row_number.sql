@@ -4,6 +4,6 @@
 -- Order the window so that the result is the same on every run (state your
 -- tie-breaker in WRITEUP.md).
 --
--- Prediction (commit before running): ______ rows.
+-- Prediction (commit before running): _60_ rows.
 
 -- YOUR QUERY HERE

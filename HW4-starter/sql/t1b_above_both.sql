@@ -5,6 +5,6 @@
 -- that have at least 20 ratings.
 -- Build on T1a in a CTE; filter or count outside it.
 --
--- Prediction (commit before running): share_above_both is about ______.
+-- Prediction (commit before running): share_above_both is about _50 rows_.
 
 -- YOUR QUERY HERE

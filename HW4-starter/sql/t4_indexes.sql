@@ -3,6 +3,9 @@
 -- copy of the database and measures plans, time and size before and after.
 --
 -- Prediction (commit before running), for each app query:
---   plan before: ______    plan after: ______
+--   plan before: A: SEARCH USING user_id + temp B-tree  plan after: A: SEARCH USING user_id+ temp B-tree
+                --B: SCAN                                            B: SEARCH USING index (movie_id,rating)
+                --C: SCAN                                            C: SEARCH USING index (timestamp)
+                --D: SCAN                                            D: SCAN
 
 -- YOUR INDEXES HERE

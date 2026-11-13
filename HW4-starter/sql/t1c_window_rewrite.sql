@@ -3,5 +3,5 @@
 -- Required columns: genre_id, movie_id, movie_mean, genre_mean
 --
 -- Prediction (commit before running): which two steps of the chain disappear?
-
+-- The genre_means AS and JOIN genre_means USING genre_id is disappeared.
 -- YOUR QUERY HERE

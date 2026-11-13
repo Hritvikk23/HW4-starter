@@ -6,6 +6,7 @@
 -- Suggested steps (one CTE each): gap with LAG; a 0/1 new_session flag;
 -- a running SUM of the flag with an explicit ROWS frame; GROUP BY.
 --
--- Prediction (commit before running): median ratings per session = ______.
+-- Prediction (commit before running): median ratings per session = ~40_.
+
 
 -- YOUR QUERY HERE

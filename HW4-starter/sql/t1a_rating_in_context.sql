@@ -2,6 +2,6 @@
 -- Required columns: user_id, movie_id, rating, user_mean, movie_mean
 -- One query, no join, no GROUP BY.
 --
--- Prediction (commit before running): this query returns ______ rows, because ______.
+-- Prediction (commit before running): this query returns _100k_ rows, because  there's no GROUPBY OR JOIN.
 
 -- YOUR QUERY HERE
