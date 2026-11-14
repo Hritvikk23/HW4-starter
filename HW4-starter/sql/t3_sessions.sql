@@ -10,3 +10,16 @@
 
 
 -- YOUR QUERY HERE
+WITH gaps AS(
+    SELECT user_id, movie_id, timestamp AS ts, 
+    timestamp - LAG(timestamp) OVER ( PARTITION BY user_id ORDER BY timestamp, movie_id) AS gap FROM ratings
+    ),
+
+flag AS(
+    SELECT user_id, movie_id, ts, 
+    CASE WHEN gap IS NULL OR gap>1800 THEN 1 ELSE 0 END AS new_session FROM gaps),  
+session_number AS(
+    SELECT user_id,movie_id,ts,
+        SUM(new_session) OVER (PARTITION BY user_id ORDER BY ts, movie_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT row) AS session_no FROM flag)
+SELECT user_id, session_no, COUNT(*) AS n_ratings, MIN(ts) AS start_ts, MAX(ts)-MIN(ts) AS duraion_s FROM session_number
+GROUP BY user_id, session_no;

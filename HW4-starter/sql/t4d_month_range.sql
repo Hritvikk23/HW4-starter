@@ -9,3 +9,5 @@
 -- plan of this rewrite SEARCH USING index(timestamp).
 
 -- YOUR QUERY HERE
+
+SELECT COUNT(*) FROM ratings WHERE timestamp >=? AND timestamp <?;
